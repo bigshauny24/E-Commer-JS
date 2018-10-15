@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id":0,
+      "title": "Soap",
+      "price": 4.95,
+      "description": "This is a bar of soap description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    },
+    {
+      "id":1,
+      "title": "Grapes",
+      "price": 2.67,
+      "description": "This is a grapes description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    },
+    {
+      "id":2,
+      "title": "Bananas",
+      "price": 1.89,
+      "description": "This is a Bananas description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    },
+    {
+      "id":3,
+      "title": "Protein Bars",
+      "price": 6.75,
+      "description": "This is a Protein Bars description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    },
+    {
+      "id":4,
+      "title": "Silverware",
+      "price": 29.95,
+      "description": "This is a Silverware description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    },
+    {
+      "id":5,
+      "title": "Vacuum",
+      "price": 89.95,
+      "description": "This is a Vacuum description",
+      "imageURL": "HTTP://PLACEHOLD.IT/1X1"
+    }
+    ]
+}
