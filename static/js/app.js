@@ -97,7 +97,33 @@ function addToCart(id){
 
    //inject html variable into cart body
    $('#cart-products').html(html);
+   //udate totals
+   updateTotal();
  }
+
+//calc Total
+function calcTotal(){
+let total = 0;
+
+//loop through cart and add all prices together
+for (let i = 0; i < cart.length; i++) {
+  total += cart[i].price;
+}
+
+return total.toFixed(2);
+
+}
+
+//function totals where necsassary
+function updateTotal(){
+  let total = calcTotal();
+  // update total in navbar
+$('#navbar-total').text('Total: $' + total);
+
+  //udate total in cart
+$('#cart-total').text('$' + total);
+
+}
 
  showCart();
 
