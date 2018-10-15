@@ -65,9 +65,16 @@ function addToCart(id){
   setTimeout(showCart, 50);
 }
  function removeFromCart(id){
-   console.log(id);
-   //TODO: create functinality for removing
+   // console.log(id);
 
+
+   for (let i = 0; i < cart.length; i++) {
+     if (id == cart[i].id) {
+       //splice params = starting index, num to remove, inject vars
+       cart.splice(i, 1);
+       break;
+     }
+   }
    setTimeout(showCart, 50);
  }
 
