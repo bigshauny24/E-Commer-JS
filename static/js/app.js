@@ -1,3 +1,8 @@
+//create global cart variable, TODO: change to firebase later
+var cart = [];
+
+
+
 $.get('../../components/header.html', function(res){
   //console.log(res);
   $('#nav').html(res);
@@ -46,4 +51,35 @@ $.get('../../products.json', showProducts)
 //add to cart takes in an ID to identify which product is being added
 function addToCart(id){
   console.log(id);
+
+  showCart();
 }
+ function removeFromCart(id){
+   console.log(id);
+   //TODO: create functinality for removing
+
+   showCart();
+ }
+
+ function showCart(){
+   //initialize html string to put into cart later
+   let html = '';
+
+
+   for (let i = 0; i < cart.length; i++) {
+     //console.log(cart[i]);
+    html += `<tr>
+    <th scope="row">1</th>
+     <td>${cart[i].title}</td>
+    <td>$${cart[i].price}</td>
+    <td>
+    <button onClick="removeFromCart(${cart[i].id})" class="btn btn-danger"></button>
+    </td>
+    </tr>`;
+   }
+
+   //inject html variable into cart body
+   $('#cart-products').html(html);
+ }
+
+ showCart();

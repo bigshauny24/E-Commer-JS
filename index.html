@@ -22,12 +22,26 @@
     <!--products span 9 columns, cart spans 3  -->
     <div class="container">
       <div class="row">
-        <div class="col-md-9" id="products">
-          
-          </div>
+        <div class="col-md-9" id="products">        
         </div><!--ends column for products -->
         <div class="col-md-3" id="cart">
-
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">price</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody id="cart-products"></tbody>
+            <tfoot>
+              <tr>
+                <th scope="col" colspan="2">Total: </th>
+                <th id="cart-total" scope="col" colspan="2">$0.00</th>
+              </tr>
+            </tfoot>
+          </table>
         </div><!--ends column for cart-->
       </div><!--ends row for cart and products-->
     </div><!--ends container -->
