@@ -50,15 +50,25 @@ $.get('../../products.json', showProducts)
 
 //add to cart takes in an ID to identify which product is being added
 function addToCart(id){
-  console.log(id);
+  //console.log(id);
 
-  showCart();
+  $.get('../../products.json', function(res){
+    for(let i = 0; i < res.products.length; i++){
+    if (id == res.products[i].id) {
+      cart.push(res.products[i]);
+      break;
+     }
+    }
+  });
+
+
+  setTimeout(showCart, 50);
 }
  function removeFromCart(id){
    console.log(id);
    //TODO: create functinality for removing
 
-   showCart();
+   setTimeout(showCart, 50);
  }
 
  function showCart(){
@@ -83,3 +93,5 @@ function addToCart(id){
  }
 
  showCart();
+
+ //add sleeper timer to use in between adding to showCart
